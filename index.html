@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Gauhar 🌹</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:linear-gradient(135deg,#ffdde1,#ee9ca7);
+    overflow-x:hidden;
+}
+
+section{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    text-align:center;
+    padding:20px;
+    position:relative;
+}
+
+h1{
+    font-size:4rem;
+    color:white;
+    text-shadow:0 0 20px rgba(255,255,255,.8);
+    animation:fadeUp 2s ease;
+}
+
+h2{
+    font-size:3rem;
+    color:white;
+    margin-bottom:20px;
+}
+
+p{
+    font-size:1.5rem;
+    color:white;
+    max-width:800px;
+    line-height:1.6;
+}
+
+.scroll{
+    margin-top:40px;
+    font-size:1.2rem;
+    color:white;
+    animation:bounce 2s infinite;
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(80px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes bounce{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(15px);
+    }
+}
+
+/* Rose Rain */
+
+.rose{
+    position:fixed;
+    top:-50px;
+    font-size:30px;
+    animation:fall linear forwards;
+    pointer-events:none;
+}
+
+@keyframes fall{
+    to{
+        transform:translateY(120vh) rotate(720deg);
+    }
+}
+
+.glow{
+    animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+    from{
+        text-shadow:0 0 10px white;
+    }
+    to{
+        text-shadow:0 0 30px white,
+                     0 0 60px pink;
+    }
+}
+</style>
+</head>
+<body>
+
+<section>
+    <h1 class="glow">
+        Hi Gauhar ❤️<br>
+        How You Doing?
+    </h1>
+
+    <p style="margin-top:25px;">
+        I got you some roses 🌹
+    </p>
+
+    <div class="scroll">
+        Scroll Down ↓
+    </div>
+</section>
+
+<section>
+    <h2>🌹 Roses For You 🌹</h2>
+
+    <p>
+        Every rose falling here is just a tiny reminder
+        that you deserve smiles, happiness and beautiful moments.
+    </p>
+
+    <div class="scroll">
+        Keep Scrolling ↓
+    </div>
+</section>
+
+<section>
+    <h2>🤝 Let's Be Friends?</h2>
+
+    <p>
+        You seem like a genuinely wonderful person,
+        and I'd love to know you better.
+    </p>
+
+    <div class="scroll">
+        One More Scroll ↓
+    </div>
+</section>
+
+<section>
+    <h2>📸 One Small Request</h2>
+
+    <p>
+        I'd love to see you.<br><br>
+        Send me your bestest and prettiest picture 😊
+    </p>
+
+    <div class="scroll">
+        Final Message ↓
+    </div>
+</section>
+
+<section>
+    <h2 class="glow">💖 Take Care Gauhar 💖</h2>
+
+    <p>
+        Stay happy.<br>
+        Keep smiling.<br>
+        And remember you're awesome.<br><br>
+
+        Take care ❤️
+    </p>
+</section>
+
+<script>
+
+function createRose(){
+    const rose=document.createElement('div');
+
+    rose.classList.add('rose');
+    rose.innerHTML='🌹';
+
+    rose.style.left=Math.random()*100+'vw';
+    rose.style.animationDuration=(3+Math.random()*5)+'s';
+
+    document.body.appendChild(rose);
+
+    setTimeout(()=>{
+        rose.remove();
+    },8000);
+}
+
+setInterval(createRose,250);
+
+</script>
+
+</body>
+</html>
